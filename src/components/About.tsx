@@ -26,7 +26,7 @@ const About = () => {
 
   const timeline = [
     { year: "2005", event: "Born in India" },
-    { year: "2009", event: "Moved to South Africa" },
+    { year: "2007", event: "Moved to South Africa" },
     { year: "2020", event: "Lost my father, found purpose in coding" },
     { year: "2022", event: "Breakthrough Junior Challenge Regional Champion" },
     { year: "2023", event: "Top 1% student in South Africa" },

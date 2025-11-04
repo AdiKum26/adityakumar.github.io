@@ -2,7 +2,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import ouraNoteImg from "@/assets/ouranote-logo.jpg";
-import finderlyImg from "@/assets/finderly-logo.png";
+import finderlyImg from "@/assets/Finderly.png";
+import rainbowNationAnimalsImg from "@/assets/rainbow-nation.png";
+import litswapImg from "@/assets/LITSWAP.png";
+import healthMlPredictionImg from "@/assets/dubstech.png";
+import seekrImg from "@/assets/aws.jpg";
 
 const Projects = () => {
   const projects = [
@@ -18,7 +22,7 @@ const Projects = () => {
         "Cross-platform React Native mobile app",
         "End-to-end encryption for user privacy"
       ],
-      github: "https://github.com/AdiKum26",
+      github: "https://github.com/OuraNote/mental-health-app",
       demo: "https://www.instagram.com/ouranote/",
       gradient: "from-purple-500 to-pink-500"
     },
@@ -34,13 +38,13 @@ const Projects = () => {
         "Step-by-step repair instructions",
         "Voice-activated tool recommendations"
       ],
-      demo: "https://apps.apple.com/us/app/finderly/id6737346286",
-      gradient: "from-pink-500 to-orange-500"
+      demo: "https://finderlyfix.com/",
+      gradient: "from-white to-white"
     },
     {
       title: "Seekr",
       description: "AI Research & Career Agent for UW students",
-      image: null,
+      image: seekrImg,
       impact: "Top project at DubHacks 2025",
       tech: ["AWS Bedrock", "Lambda", "DynamoDB", "React", "TypeScript", "Claude-3"],
       features: [
@@ -49,13 +53,13 @@ const Projects = () => {
         "Real-time data pipelines with AWS services",
         "Autonomous agent architecture"
       ],
-      github: "https://github.com/AdiKum26",
+      github: "https://github.com/AdiKum26/Seekr",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Health ML Prediction",
-      description: "Hospital cost prediction model",
-      image: null,
+      title: "DubsTech Health ML Prediction",
+      description: "ML Hospital cost prediction model",
+      image: healthMlPredictionImg,
       impact: "4th place internationally, 93.4% accuracy",
       tech: ["Python", "CatBoost", "Pandas", "NumPy", "Tableau"],
       features: [
@@ -64,12 +68,13 @@ const Projects = () => {
         "Interactive Tableau visualizations",
         "Real-world healthcare impact"
       ],
+      github: "https://github.com/AdiKum26/DubsTech-Health-ML-2025",
       gradient: "from-green-500 to-emerald-500"
     },
     {
       title: "LITSWAP",
       description: "Book donation platform for underprivileged communities",
-      image: null,
+      image: litswapImg,
       impact: "3,300+ books donated",
       tech: ["Google Sites", "HTML", "CSS", "JavaScript"],
       features: [
@@ -78,12 +83,13 @@ const Projects = () => {
         "Donation tracking system",
         "Impact analytics dashboard"
       ],
+      demo: "https://sites.google.com/view/litswapbooks/home?fbclid=PAZXh0bgNhZW0CMTEAAad7MEeG0-kZXJTJHvETGkPbkOAdm1b3q6qwUsRqRNEO3B9DjUoi6HBtq-S4OA_aem_d4TXALCIHixQMOXtVC8yrQ",
       gradient: "from-indigo-500 to-purple-500"
     },
     {
       title: "Rainbow Nation Animals",
       description: "NGO website for animal rescue and adoption",
-      image: null,
+      image: rainbowNationAnimalsImg,
       impact: "1,200+ animals rescued",
       tech: ["WordPress", "PHP", "MySQL"],
       features: [
@@ -92,7 +98,7 @@ const Projects = () => {
         "Donation processing",
         "Success stories showcase"
       ],
-      demo: "https://www.rainbownationanimals.org/",
+      demo: "https://rainbownationanimals.wordpress.com/",
       gradient: "from-yellow-500 to-red-500"
     }
   ];
@@ -114,7 +120,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index}
-              className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up border-2 hover:border-primary/50 bg-card/50 backdrop-blur-sm"
+              className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up border-2 hover:border-primary/50 bg-card/50 backdrop-blur-sm flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Project Image/Gradient */}
@@ -123,7 +129,11 @@ const Projects = () => {
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-contain p-8 group-hover:scale-110 transition-transform duration-500"
+                    className={`w-full h-full group-hover:scale-110 transition-transform duration-500 ${
+                      project.title === "Finderly" 
+                        ? "object-contain p-8" 
+                        : "object-cover"
+                    }`}
                   />
                 )}
                 {!project.image && (
@@ -146,7 +156,7 @@ const Projects = () => {
                 </div>
               </CardHeader>
 
-              <CardContent className="space-y-4">
+              <CardContent className="flex flex-col space-y-4 flex-grow">
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
@@ -160,7 +170,7 @@ const Projects = () => {
                 </div>
 
                 {/* Features */}
-                <ul className="space-y-1 text-sm text-muted-foreground">
+                <ul className="space-y-1 text-sm text-muted-foreground flex-grow">
                   {project.features.slice(0, 3).map((feature, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <span className="text-secondary mt-1">•</span>
@@ -170,7 +180,7 @@ const Projects = () => {
                 </ul>
 
                 {/* Action Buttons */}
-                <div className="flex gap-2 pt-4">
+                <div className="flex gap-2 pt-6 mt-auto">
                   {project.github && (
                     <Button 
                       size="sm"
