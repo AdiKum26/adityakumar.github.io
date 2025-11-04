@@ -9,12 +9,12 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
+      {/* Animated Background - Darker for better contrast */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-secondary opacity-95" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-10 right-10 w-[600px] h-[600px] bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-primary-glow/10 rounded-full blur-3xl animate-glow" />
+        <div className="absolute top-20 left-10 w-96 h-96 bg-accent/30 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-10 right-10 w-[600px] h-[600px] bg-primary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
       </div>
 
       {/* Content */}
@@ -30,14 +30,14 @@ const Hero = () => {
             </div>
             
             <div className="space-y-4">
-              <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.95] tracking-tight">
+              <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.95] tracking-tight drop-shadow-2xl">
                 Aditya<br/>Kumar
               </h1>
               <div className="space-y-3">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white/95 leading-tight">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white drop-shadow-lg leading-tight">
                   Developer, Innovator<br/>& Storyteller
                 </h2>
-                <p className="text-lg md:text-xl text-white/80 max-w-xl leading-relaxed">
+                <p className="text-lg md:text-xl text-white/95 max-w-xl leading-relaxed drop-shadow-md">
                   Building apps that make life better — from mental health to AI tools
                 </p>
               </div>
