@@ -28,7 +28,7 @@ const About = () => {
     { year: "2005", event: "Born in India" },
     { year: "2007", event: "Moved to South Africa" },
     { year: "2018", event: "Selected for provincial cricket" },
-    { year: "2020", event: "Lost my father, found purpose in coding" },
+    { year: "2021", event: "Lost my father, found purpose in coding" },
     { year: "2022", event: "Breakthrough Junior Challenge Regional Champion" },
     { year: "2023", event: "Top 1% student in South Africa" },
     { year: "2024", event: "Direct admit to UW Computer Science" },
@@ -54,7 +54,7 @@ const About = () => {
           </p>
           
           <p>
-            In 2020, I lost my father. That moment taught me that life is fragile, but purpose is forever. 
+            In 2021, I lost my father. That moment taught me that life is fragile, but purpose is forever. 
             I channeled my grief into coding — determined to build technology that uplifts others the way 
             I once wished to be uplifted.
           </p>

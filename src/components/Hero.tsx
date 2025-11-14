@@ -38,7 +38,7 @@ const Hero = () => {
                   Developer, Innovator<br/>& Storyteller
                 </h2>
                 <p className="text-lg md:text-xl text-white/95 max-w-xl leading-relaxed drop-shadow-md">
-                  Building apps that make life better — from mental health to AI tools
+                  Building apps that make life better — from mental health platforms to real-time AI assistants
                 </p>
               </div>
             </div>
